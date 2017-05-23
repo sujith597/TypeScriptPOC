@@ -1,3 +1,7 @@
+///<reference path="IClass.ts"  />
+///<reference path="ClassOne.ts"  />
+///<reference path="ClassTwo.ts"  />
+
 var studentName:string = "Sujith Kumar";
 var marks1:number =50;
 var marks2:number = 45;
@@ -67,3 +71,72 @@ var index2:any;
 for(index2 in numberArray){
     console.log(numberArray[index2]);
 }
+//  Union datatypes can be string or number
+var val:string|number 
+val = 12;
+console.log("numeric value of val "+val);
+val = "This is a string";
+console.log("string value of val "+val);
+
+
+// Lets do some Interface work
+interface Iperson {
+fname : string,
+lname: string,
+age:number,
+sayFullName : ()=> string
+};
+
+var customer:Iperson ={
+fname:"Sujith",
+lname :"kumar",
+age :25,
+sayFullName : ():string => {return "Hi"}
+};
+
+// Play with Class
+
+class Car { 
+   //field 
+   engine:string; 
+   
+   //constructor 
+   constructor(engine:string) { 
+      this.engine = engine 
+   }  
+   
+   //function 
+   disp():void { 
+      console.log("Function displays Engine is  :   "+this.engine) 
+   } 
+} 
+
+//create an object 
+var objxx = new Car("XXSY1")
+
+//access the field 
+console.log("Reading attribute value Engine as :  "+objxx.engine)  
+
+//access the function
+objxx.disp()
+
+
+class Shape { 
+   Area:number 
+   
+   constructor(a:number) { 
+      this.Area = a 
+   } 
+} 
+
+class Circle extends Shape { 
+   disp():void { 
+      console.log("Area of the circle:  "+this.Area) 
+   } 
+}
+  
+var objxy = new Circle(223); 
+objxy.disp();
+
+var _classOne = new ClassOne();
+_classOne.getClass();

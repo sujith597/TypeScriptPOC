@@ -1,6 +1,3 @@
-///<reference path="IClass.ts"  />
-///<reference path="ClassOne.ts"  />
-///<reference path="ClassTwo.ts"  />
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,6 +8,45 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var classesNameSpace;
+(function (classesNameSpace) {
+    ;
+})(classesNameSpace || (classesNameSpace = {}));
+///<reference path="IClass.ts"  />
+var classesNameSpace;
+(function (classesNameSpace) {
+    var ClassOne = (function () {
+        function ClassOne() {
+        }
+        ClassOne.prototype.getClass = function () {
+            console.log(this.className + this.classID);
+            return this.className + this.classID;
+        };
+        ;
+        return ClassOne;
+    }());
+    classesNameSpace.ClassOne = ClassOne;
+    ;
+})(classesNameSpace || (classesNameSpace = {}));
+///<reference path="IClass.ts"  />
+var classesNameSpace;
+(function (classesNameSpace) {
+    var ClassTwo = (function () {
+        function ClassTwo() {
+        }
+        ClassTwo.prototype.getClass = function () {
+            console.log(this.className + this.classID);
+            return this.className + this.classID;
+        };
+        ;
+        return ClassTwo;
+    }());
+    classesNameSpace.ClassTwo = ClassTwo;
+    ;
+})(classesNameSpace || (classesNameSpace = {}));
+///<reference path="IClass.ts"  />
+///<reference path="ClassOne.ts"  />
+///<reference path="ClassTwo.ts"  />
 var studentName = "Sujith Kumar";
 var marks1 = 50;
 var marks2 = 45;
@@ -129,4 +165,3 @@ var objxy = new Circle(223);
 objxy.disp();
 var _classOne = new ClassOne();
 _classOne.getClass();
-//# sourceMappingURL=FirstTypeScriptPage.js.map
